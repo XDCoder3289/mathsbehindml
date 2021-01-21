@@ -1,8 +1,8 @@
 *.log
 db.sqlite3
 db.sqlite3-journal
-/__pycache__/
-/migrations
+__pycache__/
+migrations/
 /media
 secret.key
 settings.py
