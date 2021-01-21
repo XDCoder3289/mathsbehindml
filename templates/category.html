@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load staticfiles %}
+<html lang="en-us">
+<head>
+</head>
+<body>
+    {% block body_block %}
+    <div>
+        <h1>{{category.name}}</h1>
+        <p><a href="/">Home Page</a></p>
+    </div>
+
+    <div class="content">
+    <ul>
+        {% for p in posts %}
+            <li><a class="a" href="{{p.slug}}/">{{p}}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+    <br>
+     {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load staticfiles %}
+<html lang="en-us">
+<head>
+</head>
+<body>
+  {% block body_block %}
+    <h1 class="title">{{post.title}}</h1>
+    <p><a href="/">Home Page</a></p>
+    {{post.blog | safe}}
+
+    <div class="links">
+      {% for post in posts %}
+        <a class="a" href="/{{category.slug}}/{{ post.slug }}/">{{post}}</a>
+      {% endfor %}
+    </div> 
+  {% endblock %}
+  
+  {% block footer_block %}
+  {% endblock %}
+</body>
+</html>

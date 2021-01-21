@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en-us">
+<head>
+    {% block meta_block %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/index.css" %}" />
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <title>TMBML</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body_block %}
+    <h1>The Maths Behind ML</h1>
+    <div class="content">
+
+    <p>This online book is intended for people who want to learn Machine Learning, but don’t have the mathematical knowledge. Although every concept has been made fairly simple to understand, you will still need a grasp on high school level maths. No prior knowledge of anything above high school level is assumed.
+
+      For any suggestions, you can email at: mathsbehindml@protonmail.com</p>
+      <br>
+     <p> 
+      Regards,
+    </p>
+    <p>
+      Salman A.
+    </p>
+    <hr>
+    <h2>Topics</h2>
+    {% for c in categories %}
+        <a class="a" href="{{c.slug}}/">{{c}}</a>
+    {% endfor %}
+    </div>
+    {% endblock %}
+    
+    {% block footer_block %}
+    <div class="footer">
+      <footer>All effort to avoid publishing of copyright work has been made. You can email at mathsbehindml@protonmail.com for any kind of suggestions.</footer>
+      <p><a class="a" href="https://twitter.com/m__salman_" target="_blank">Twitter</a></p>
+      <p>© 2021 Copyright | The Maths Behind ML </p>
+    </div>
+    {% endblock %}
+</body>
+</html>
