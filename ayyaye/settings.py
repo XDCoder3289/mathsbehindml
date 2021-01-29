@@ -18,6 +18,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
+CKEDITOR_IMAGE_BACKEND = "pillow"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -51,7 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ai',
     'ckeditor',
+    'ckeditor_uploader',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,5 +138,7 @@ USE_TZ = True
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+CKEDITOR_UPLOAD_PATH = "uploads/"
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
