@@ -2,22 +2,27 @@
 {% extends 'index.html' %}
 {% load staticfiles %}
 <html lang="en-us">
+
 <head>
 </head>
+
 <body>
   {% block body_block %}
-    <h1 class="title">{{post.title}}</h1>
-    <p><a href="/">Home Page</a></p>
-    {{post.blog | safe}}
+  <h1 class="title">{{post.title}}</h1>
+  <p><a href="/">Home Page</a></p>
+  {{post.blog | safe}}
 
-    <div class="links">
+  <div class="links">
+    <ul class="post-footer">
       {% for post in posts %}
-        <a class="a" href="/{{category.slug}}/{{ post.slug }}/">{{post}}</a>
+      <li class="li-post"><a class="a" href="/{{category.slug}}/{{ post.slug }}/">{{post}}</a></li>
       {% endfor %}
-    </div> 
+    </ul>
+  </div>
   {% endblock %}
-  
+
   {% block footer_block %}
   {% endblock %}
 </body>
+
 </html>

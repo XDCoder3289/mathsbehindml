@@ -16,6 +16,7 @@ h1,h2,h3,h4 {
 
 .title {
     font-size: 42px;
+    margin-bottom: 1px;
 }
 
 .h {
@@ -25,7 +26,7 @@ h1,h2,h3,h4 {
     color: black;
 }
 .h:hover{
-    color: #487e95 
+    color: #487e95
 }
 
 
@@ -37,12 +38,24 @@ h1,h2,h3,h4 {
 }
 
 .a:hover{
-    color: #487e95 
+    color: #487e95
 }
 
-.cat-ul {
-    list-style-type: none;
+
+a {
+    border-bottom: 1px #487e95 dashed;
+    text-decoration: none;
+    margin-right: 4rem;
+    color: black;
 }
+
+a:hover{
+    color: #487e95
+}
+
+/*.cat-ul {*/
+/*    list-style-type: none;*/
+/*}*/
 footer {
     /* position: fixed;
     left: 0;
@@ -58,9 +71,16 @@ footer {
     text-align: center;
     margin-top: 60px;
 }
+.post-footer {
+  list-style-type: none;
+  display: inline;
+}
+.li-post {
+  margin-bottom: 8px;
+}
 
 .content {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 150px);
 }
 .footer{
     text-align: center;
